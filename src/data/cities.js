@@ -1,4 +1,5 @@
-const cities = [
+// Raw list may contain duplicates; export a de-duplicated list for clean routing/UI
+const rawCities = [
     "visakhapatnam",
     "vijayawada",
     "guntur",
@@ -202,5 +203,8 @@ const cities = [
     "guntakal",
     "jaggaiahpet"
   ];
-  
-  export default cities;
+
+// Ensure exported list is unique to prevent duplicate keys and routes
+const cities = Array.from(new Set(rawCities));
+
+export default cities;

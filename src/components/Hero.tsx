@@ -8,7 +8,13 @@ import {
   HERO_TRUST_POINTS,
 } from "@/constants/constants";
 
-const Hero = ({ onOpenQuoteModal }: { onOpenQuoteModal: () => void }) => {
+interface HeroProps {
+  onOpenQuoteModal: () => void;
+  title?: string;
+  subtitle?: string;
+}
+
+const Hero = ({ onOpenQuoteModal, title, subtitle }: HeroProps) => {
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-20">
       {/* Background Image with Overlay */}
@@ -18,7 +24,6 @@ const Hero = ({ onOpenQuoteModal }: { onOpenQuoteModal: () => void }) => {
           alt="Professional packers and movers team with happy family"
           className="w-full h-full object-cover"
           loading="eager"
-          fetchPriority="high"
           decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40"></div>
@@ -29,13 +34,13 @@ const Hero = ({ onOpenQuoteModal }: { onOpenQuoteModal: () => void }) => {
         <div className="max-w-3xl">
           <div className="animate-fade-in-up">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-              {HERO_CONTENT.title}
+              {title ?? HERO_CONTENT.title}
             </h1>
           </div>
           
           <div className="animate-fade-in-up" style={{ animationDelay: "0.2s", opacity: 0, animationFillMode: "forwards" }}>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-              {HERO_CONTENT.subtitle}
+              {subtitle ?? HERO_CONTENT.subtitle}
             </p>
           </div>
 

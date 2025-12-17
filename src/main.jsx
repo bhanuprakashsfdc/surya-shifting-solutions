@@ -13,6 +13,7 @@ import NotFound from './pages/NotFound.tsx';
 import cities from './data/cities.js';
 import {
   CityService,
+  CityServiceParam,
   Packersandmovers,
   Packersandmoversnearme,
   BestPackersandMovers,
@@ -34,6 +35,8 @@ root.render(
                 <Route index element={<Home />} />
                 <Route path="/index.html" element={<Home />} />
                 {/* Dynamic city routes */}
+                {/* Param-based dynamic route for city service */}
+                <Route path="/packers-and-movers-in-:slug.html" element={<CityServiceParam />} />
                 {cities.map((city) => {
                   const formattedCity = city.toLowerCase().replace(/ /g, '-');
                   const path1 = `/packers-and-movers-in-${formattedCity}.html`;

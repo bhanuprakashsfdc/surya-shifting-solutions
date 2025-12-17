@@ -14,6 +14,7 @@ import Footer from "@/components/Footer";
 import QuoteModal from "@/components/QuoteModal";
 import StickyCTA from "@/components/StickyCTA";
 import CityCoverage from "@/components/CityCoverage";
+import TopCities from "@/components/TopCities.jsx";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -36,6 +37,8 @@ function App() {
         <TrustBadges />
         <Services />
         <CityCoverage />
+        {/* City cloud showcasing a shuffled selection of 100 cities */}
+        <TopCities labelPrefix="Packers and Movers in" limit={100} />
         <Pricing />
         <HowItWorks />
         <Testimonials />
