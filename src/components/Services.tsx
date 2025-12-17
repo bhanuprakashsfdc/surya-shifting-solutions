@@ -1,46 +1,7 @@
-import { Home, Truck, Building2, Car, Package, Boxes } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
+import { SERVICES } from "@/constants/constants";
 
 const Services = () => {
-  const services = [
-    {
-      icon: Home,
-      title: "Local House Shifting",
-      description:
-        "Professional packing and moving services for local household relocations. We handle everything from packing to unpacking with care and efficiency.",
-    },
-    {
-      icon: Truck,
-      title: "Long-Distance Relocation",
-      description:
-        "All-India shifting services for inter-city and inter-state moves. Safe transportation of your belongings across the country with real-time tracking.",
-    },
-    {
-      icon: Building2,
-      title: "Office Moving",
-      description:
-        "Corporate and commercial relocation services with minimal downtime. We handle office furniture, IT equipment, and documents with professional care.",
-    },
-    {
-      icon: Car,
-      title: "Car & Bike Transport",
-      description:
-        "Secure vehicle transportation services across India. Enclosed carriers and GPS tracking ensure your vehicle reaches safely to any destination.",
-    },
-    {
-      icon: Package,
-      title: "Packing & Unpacking",
-      description:
-        "Expert packing services using high-quality materials. Our trained staff ensures proper cushioning and protection for all your valuable items.",
-    },
-    {
-      icon: Boxes,
-      title: "Loading & Unloading",
-      description:
-        "Professional loading and unloading services with modern equipment. Our experienced team handles heavy items and fragile goods with expertise.",
-    },
-  ];
-
   return (
     <section id="services" className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -54,7 +15,7 @@ const Services = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => {
+          {SERVICES.map((service, index) => {
             const Icon = service.icon;
             return (
               <Card

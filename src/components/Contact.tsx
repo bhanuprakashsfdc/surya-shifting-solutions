@@ -11,6 +11,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { CONTACT_INFO, MOVE_TYPES } from "@/constants/constants";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -150,13 +151,13 @@ const Contact = () => {
                   <SelectTrigger id="moveType">
                     <SelectValue placeholder="Select move type" />
                   </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="local-house">Local House Shifting</SelectItem>
-                    <SelectItem value="long-distance">Long Distance Relocation</SelectItem>
-                    <SelectItem value="office">Office Moving</SelectItem>
-                    <SelectItem value="car">Car Transport</SelectItem>
-                    <SelectItem value="bike">Bike Transport</SelectItem>
-                  </SelectContent>
+                    <SelectContent>
+                      {MOVE_TYPES.map((type) => (
+                        <SelectItem key={type.value} value={type.value}>
+                          {type.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
                 </Select>
               </div>
 
@@ -186,7 +187,7 @@ const Contact = () => {
               
               <div className="space-y-6">
                 <a 
-                  href="tel:+919876543210"
+                  href={CONTACT_INFO.phoneHref}
                   className="flex items-start gap-4 p-4 rounded-lg hover:bg-muted transition-colors group"
                 >
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
@@ -194,13 +195,13 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-foreground mb-1">Phone</p>
-                    <p className="text-muted-foreground">+91-9876543210</p>
+                    <p className="text-muted-foreground">{CONTACT_INFO.phoneDisplay}</p>
                     <p className="text-sm text-primary mt-1">Click to call now</p>
                   </div>
                 </a>
 
                 <a 
-                  href="https://wa.me/919876543210"
+                  href={CONTACT_INFO.whatsappHref}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-start gap-4 p-4 rounded-lg hover:bg-muted transition-colors group"
@@ -210,13 +211,13 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-foreground mb-1">WhatsApp</p>
-                    <p className="text-muted-foreground">+91-9876543210</p>
+                    <p className="text-muted-foreground">{CONTACT_INFO.whatsappDisplay}</p>
                     <p className="text-sm text-secondary mt-1">Chat with us</p>
                   </div>
                 </a>
 
                 <a 
-                  href="mailto:contact@suryaallindiapackers.com"
+                  href={`mailto:${CONTACT_INFO.email}`}
                   className="flex items-start gap-4 p-4 rounded-lg hover:bg-muted transition-colors group"
                 >
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary/20 transition-colors">
@@ -224,7 +225,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-foreground mb-1">Email</p>
-                    <p className="text-muted-foreground break-all">contact@suryaallindiapackers.com</p>
+                    <p className="text-muted-foreground break-all">{CONTACT_INFO.email}</p>
                   </div>
                 </a>
 
@@ -235,9 +236,9 @@ const Contact = () => {
                   <div>
                     <p className="font-semibold text-foreground mb-1">Address</p>
                     <p className="text-muted-foreground">
-                      Main Office: Hyderabad, Telangana<br />
-                      Serving: Hyderabad, Bangalore, Chennai,<br />
-                      Vijayawada, Guntur, Vizag & All India
+                      {CONTACT_INFO.mainOffice}
+                      <br />
+                      Serving: {CONTACT_INFO.serviceAreas.slice(0, 6).join(", ")} & All India
                     </p>
                   </div>
                 </div>

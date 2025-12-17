@@ -1,6 +1,11 @@
 import { Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-moving.jpg";
+import {
+  HERO_CONTENT,
+  CONTACT_INFO,
+  HERO_QUICK_CONTACT,
+} from "@/constants/constants";
 
 const Hero = ({ onOpenQuoteModal }: { onOpenQuoteModal: () => void }) => {
   return (
@@ -21,13 +26,13 @@ const Hero = ({ onOpenQuoteModal }: { onOpenQuoteModal: () => void }) => {
         <div className="max-w-3xl">
           <div className="animate-fade-in-up">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6 leading-tight">
-              Surya All India Packers and Movers – Trusted Packers & Movers for Local & All-India Shifting
+              {HERO_CONTENT.title}
             </h1>
           </div>
           
           <div className="animate-fade-in-up" style={{ animationDelay: "0.2s", opacity: 0, animationFillMode: "forwards" }}>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-              Fast, safe and insured house shifting, office relocation & vehicle transport across India.
+              {HERO_CONTENT.subtitle}
             </p>
           </div>
 
@@ -35,13 +40,13 @@ const Hero = ({ onOpenQuoteModal }: { onOpenQuoteModal: () => void }) => {
             className="flex flex-col sm:flex-row gap-4 animate-fade-in-up"
             style={{ animationDelay: "0.4s", opacity: 0, animationFillMode: "forwards" }}
           >
-            <a href="tel:+919876543210">
+            <a href={CONTACT_INFO.phoneHref}>
               <Button 
                 size="lg" 
                 className="w-full sm:w-auto bg-primary hover:bg-primary-hover text-primary-foreground text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all"
               >
                 <Phone className="w-5 h-5 mr-2" />
-                Call Now
+                {HERO_CONTENT.primaryCta}
               </Button>
             </a>
             <Button 
@@ -51,7 +56,7 @@ const Hero = ({ onOpenQuoteModal }: { onOpenQuoteModal: () => void }) => {
               className="w-full sm:w-auto bg-secondary hover:bg-secondary-hover text-secondary-foreground border-0 text-lg px-8 py-6 shadow-lg hover:shadow-xl transition-all"
             >
               <MessageCircle className="w-5 h-5 mr-2" />
-              Get Free Quote
+              {HERO_CONTENT.secondaryCta}
             </Button>
           </div>
 
@@ -60,23 +65,22 @@ const Hero = ({ onOpenQuoteModal }: { onOpenQuoteModal: () => void }) => {
             className="mt-8 flex flex-wrap gap-4 text-sm animate-fade-in-up"
             style={{ animationDelay: "0.6s", opacity: 0, animationFillMode: "forwards" }}
           >
-            <a 
-              href="tel:+919876543210" 
-              className="flex items-center text-foreground hover:text-primary transition-colors"
-            >
-              <Phone className="w-4 h-4 mr-2" />
-              +91-9876543210
-            </a>
-            <span className="text-muted-foreground">|</span>
-            <a 
-              href="https://wa.me/919876543210" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="flex items-center text-foreground hover:text-primary transition-colors"
-            >
-              <MessageCircle className="w-4 h-4 mr-2" />
-              WhatsApp
-            </a>
+            {HERO_QUICK_CONTACT.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                target={link.type === "whatsapp" ? "_blank" : undefined}
+                rel={link.type === "whatsapp" ? "noopener noreferrer" : undefined}
+                className="flex items-center text-foreground hover:text-primary transition-colors"
+              >
+                {link.type === "phone" ? (
+                  <Phone className="w-4 h-4 mr-2" />
+                ) : (
+                  <MessageCircle className="w-4 h-4 mr-2" />
+                )}
+                {link.label}
+              </a>
+            ))}
           </div>
         </div>
       </div>

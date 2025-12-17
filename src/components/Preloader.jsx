@@ -1,33 +1,32 @@
 import React from 'react';
+import { PRELOADER_TEXT } from "@/constants/constants";
+
 const Preloader = () => {
   return (
-    <div id="preloader" className="preloader">
+    <div
+      id="preloader"
+      className="preloader"
+      role="status"
+      aria-live="polite"
+      aria-label="Loading content"
+    >
       <div className="animation-preloader">
-        <div className="spinner"></div>
-        <div className="txt-loading">
-          <span data-text-preloader="A" className="letters-loading">
-            A
-          </span>
-          <span data-text-preloader="D" className="letters-loading">
-            D
-          </span>
-          <span data-text-preloader="I" className="letters-loading">
-            I
-          </span>
-          <span data-text-preloader="T" className="letters-loading">
-            T
-          </span>
-          <span data-text-preloader="Y" className="letters-loading">
-            Y
-          </span>
-          <span data-text-preloader="A" className="letters-loading">
-            A
-          </span>
+        <div className="spinner" />
+        <div className="txt-loading" aria-label="Loading">
+          {PRELOADER_TEXT.brand.split("").map((letter, index) => (
+            <span key={`${letter}-${index}`} data-text-preloader={letter} className="letters-loading">
+              {letter}
+            </span>
+          ))}
         </div>
-        <p className="text-center">Sri Cargo <br/> Packers and Movers</p>
-        <p className="text-center">Loading</p>
+        <p className="text-center">
+          {PRELOADER_TEXT.sublineTop} <br /> {PRELOADER_TEXT.sublineBottom}
+        </p>
+        <p className="text-center text-sm uppercase tracking-[0.2em] text-muted-foreground">
+          Loading
+        </p>
       </div>
-      <div className="loader">
+      <div className="loader" aria-hidden="true">
         <div className="row">
           <div className="col-3 loader-section section-left">
             <div className="bg"></div>
