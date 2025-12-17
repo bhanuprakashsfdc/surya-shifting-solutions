@@ -201,7 +201,86 @@ const rawCities = [
     "tadepalligudem",
     "kavali",
     "guntakal",
-    "jaggaiahpet"
+    "jaggaiahpet",
+    "mumbai","delhi","bengaluru","hyderabad","chennai","kolkata","pune","ahmedabad","jaipur","surat",
+"lucknow","kanpur","nagpur","indore","bhopal","patna","ranchi","raipur","bhubaneswar","cuttack",
+"visakhapatnam","vijayawada","guntur","nellore","kurnool","rajahmundry","kadapa","tirupati","anantapur","kakinada",
+"eluru","ongole","chittoor","machilipatnam","vizianagaram","srikakulam","bhimavaram","madanapalle","adoni","tenali",
+"proddatur","tadepalligudem","dharmavaram","gudivada","narasaraopet","tadipatri","kavali","nandyal","chirala","hindupur",
+"macherla","markapur","bapatla","puttur","samalkota","guntakal","ponnur","palakollu","tuni","rayachoti",
+"gooty","amalapuram","nidadavole","mandapeta","piduguralla","jaggaiahpet","salur","palasa","kandukur","tanuku",
+"sattenapalle","parvathipuram","nuzvid","atmakur","jammalamadugu","vinukonda","gudur","sullurpeta","venkatagiri","ichchapuram",
+"rajampet","mangalagiri","yemmiganur","bheemunipatnam","pithapuram","pulivendula","mylavaram","udayagiri","punganur","kothagudem",
+"naidupeta","kadiri","repalle","dhone","bobbili","pedana","mydukur","giddalur","gajapathinagaram","pathapatnam",
+"tekkali","nandigama","penugonda","rampachodavaram","kanigiri","kothapeta","palamaner","muddanur","rayadurg","pileru",
+"kalikiri","banaganapalle","parachur","srikalahasti","betamcherla","rajanagaram","anakapalle","chagallu","mummidivaram","nagari",
+"nellimarla","patancheru","sompeta","palakonda","dwarakatirumala","gajuwaka","payakaraopeta","tallapudi","yerraguntla","ramachandrapuram",
+"narasapuram","polavaram","chilakaluripet","mandasa","kuppam","ichapuram",
+
+
+// telangana
+"warangal","karimnagar","nizamabad","khammam","siddipet","medak","adilabad","mancherial","jagtial","ramagundam",
+"mahbubnagar","wanaparthy","gadwal","narayanpet","nagarkurnool","suryapet","nalgonda","miryalaguda","kodad","bhongir",
+
+
+// tamil nadu
+"coimbatore","tiruppur","erode","salem","namakkal","karur","tiruchirappalli","thanjavur","kumbakonam","mayiladuthurai",
+"madurai","dindigul","theni","sivakasi","virudhunagar","ramanathapuram","paramakudi","thoothukudi","tirunelveli","tenkasi",
+"vellore","ranipet","arcot","katpadi","ambur","vaniyambadi","hosur","krishnagiri","dharmapuri","uddumalpet",
+"pollachi","palani","oddanchatram","cuddalore","chidambaram","neyveli","panruti","virudhachalam","villupuram","kallakurichi",
+
+
+// karnataka
+"mysuru","mangaluru","udupi","manipal","chikkamagaluru","hassan","tumakuru","chitradurga","davangere","shivamogga",
+"hubballi","dharwad","belagavi","bagalkot","bijapur","kalaburagi","yadgir","raichur","koppal","gadag",
+"hospet","bellary","sandur","siruguppa","bidar","basavakalyan","bhalki","chincholi",
+
+
+// kerala
+"kochi","ernakulam","thrissur","palakkad","malappuram","kozhikode","kannur","kasaragod","wayanad","idukki",
+"trivandrum","kollam","pathanamthitta","alappuzha","kottayam","muvattupuzha","perumbavoor","angamaly","chalakudy","irinjalakuda",
+
+
+// maharashtra
+"thane","navi mumbai","kalyan","dombivli","ulhasnagar","ambernath","badlapur","panvel","karjat","alibag",
+"satara","sangli","kolhapur","solapur","latur","osmanabad","beed","parbhani","hingoli","nanded",
+"aurangabad","jalna","akola","washim","buldhana","amravati","wardha","yavatmal","chandrapur","gadchiroli",
+
+
+// gujarat
+"vadodara","rajkot","jamnagar","junagadh","bhavnagar","surendranagar","mehsana","palanpur","gandhinagar","anand",
+"nadiad","valsad","navsari","vapi","porbandar","morbi","wankaner","limbdi","botad","amreli",
+
+
+// rajasthan
+"jodhpur","udaipur","ajmer","pushkar","bhilwara","chittorgarh","banswara","dungarpur","pratapgarh","sirohi",
+"pali","falna","sumerpur","barmer","jaisalmer","balotra","jalore","sanchor","nagaur","makrana",
+
+
+// madhya pradesh
+"gwalior","jhansi","sagar","damoh","satna","rewa","katni","jabalpur","hoshangabad","itarsi",
+"sehore","vidisha","raisengh","tikamgarh","chhatarpur","panna","datia","morena","bhind","sheopur",
+
+
+// uttar pradesh
+"noida","greater noida","ghaziabad","meerut","muzaffarnagar","saharanpur","aligarh","mathura","agra","firozabad",
+"bareilly","moradabad","rampur","shahjahanpur","pilbhit","lakhimpur","sitapur","hardoi","unnao","rae bareli",
+"varanasi","prayagraj","mirzapur","sonbhadra","jaunpur","azamgarh","ballia","mau","ghazipur","chandauli",
+
+
+// west bengal
+"howrah","hooghly","serampore","chandannagar","kharagpur","medinipur","haldia","asansol","durgapur","siliguri",
+"jalpaiguri","alipurduar","cooch behar","balurghat","malda","raiganj","bongaon","ranaghat","krishnanagar","berhampore",
+
+
+// odisha
+"puri","balasore","baripada","keonjhar","angul","dhenkanal","sambalpur","jharsuguda","bargarh","titlagarh",
+"balangir","koraput","jeypore","rayagada","nabarangpur","malkangiri","phulbani","nayagarh","kendrapara","jagatsinghpur",
+
+
+// assam & northeast
+"guwahati","silchar","jorhat","dibrugarh","tinsukia","tezpur","nagaon","diphu","karimganj","dhubri",
+"shillong","tura","aizawl","lunglei","kohima","dimapur","itanagar","naharlagun","pasighat","roing",
   ];
 
 // Ensure exported list is unique to prevent duplicate keys and routes

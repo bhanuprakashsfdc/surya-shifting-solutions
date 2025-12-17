@@ -25,10 +25,10 @@ export const COMPANY = {
 };
 
 export const CONTACT_INFO = {
-  phoneDisplay: "+91-9876543210",
-  phoneHref: "tel:+919876543210",
-  whatsappDisplay: "+91-9876543210",
-  whatsappHref: "https://wa.me/919876543210",
+  phoneDisplay: "+91-9492404119",
+  phoneHref: "tel:+919492404119",
+  whatsappDisplay: "+91-9492404119",
+  whatsappHref: "https://wa.me/919492404119",
   email: "contact@suryaallindiapackers.com",
   address: "Hyderabad, Telangana, India",
   mainOffice: "Main Office: Hyderabad, Telangana",
@@ -54,21 +54,21 @@ export const NAV_LINKS = [
 
 export const HERO_CONTENT = {
   title:
-    "Packers and Movers in Hyderabad – Safe, Insured, GST-Billed Moves Across India",
+    "No.1 Packers and Movers in India — Fast, Safe & GST-Billed Relocation",
   subtitle:
-    "Fast local & all-India house shifting, office relocation, and vehicle transport with verified staff and full insurance.",
-  primaryCta: "Call Now",
+    "Local & all‑India house shifting, office relocation, and car/bike transport. Instant 5‑minute quote, verified staff, full insurance & GST bill.",
+  primaryCta: "Talk to an Expert",
   secondaryCta: "Get Free Quote",
 };
 
 export const CTA_LABELS = {
-  pricingCall: "Call for Exact Estimate",
+  pricingCall: "Get Exact Price on Call",
 };
 
 export const HERO_TRUST_POINTS = [
-  "500+ moves | 4.8/5 rating",
-  "GST billing & full insurance",
-  "24×7 support & live updates",
+  "500+ moves • 4.8/5 rating",
+  "GST bill & transit insurance",
+  "Pan‑India network • 24×7 support",
 ];
 
 export const CITY_COVERAGE = [
@@ -147,37 +147,37 @@ export const SERVICES = [
     icon: Home,
     title: "Local House Shifting",
     description:
-      "Professional packing and moving services for local household relocations. We handle everything from packing to unpacking with care and efficiency.",
+      "End‑to‑end local home shifting with premium packing, careful loading, safe transport, and quick unpacking. No hidden costs, transparent pricing.",
   },
   {
     icon: Truck,
     title: "Long-Distance Relocation",
     description:
-      "All-India shifting services for inter-city and inter-state moves. Safe transportation of your belongings across the country with real-time tracking.",
+      "Pan‑India inter‑city and inter‑state moves with GPS tracking, damage‑free transit, and delivery commitments. Ideal for 1BHK–4BHK and complete household moves.",
   },
   {
     icon: Building2,
     title: "Office Moving",
     description:
-      "Corporate and commercial relocation services with minimal downtime. We handle office furniture, IT equipment, and documents with professional care.",
+      "Corporate relocation with minimal downtime. Expert handling of office furniture, IT equipment, servers, and documents with labeling and insured transport.",
   },
   {
     icon: Car,
     title: "Car & Bike Transport",
     description:
-      "Secure vehicle transportation services across India. Enclosed carriers and GPS tracking ensure your vehicle reaches safely to any destination.",
+      "Door‑to‑door car and bike transport across India. Enclosed carriers, GPS tracking, proper crating, and full vehicle insurance for complete peace of mind.",
   },
   {
     icon: Package,
     title: "Packing & Unpacking",
     description:
-      "Expert packing services using high-quality materials. Our trained staff ensures proper cushioning and protection for all your valuable items.",
+      "Premium packing with bubble wrap, foam sheets, corrugated boxes, and fragile‑safe labeling. Careful unpacking and placement at destination.",
   },
   {
     icon: Boxes,
     title: "Loading & Unloading",
     description:
-      "Professional loading and unloading services with modern equipment. Our experienced team handles heavy items and fragile goods with expertise.",
+      "Professional loading/unloading using trolleys, dollies, and safety gear. Expert handling of heavy furniture and fragile items to prevent damage.",
   },
 ];
 
