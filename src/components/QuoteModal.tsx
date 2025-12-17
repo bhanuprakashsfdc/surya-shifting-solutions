@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -18,6 +17,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { MOVE_TYPES } from "@/constants/constants";
 
 interface QuoteModalProps {
   isOpen: boolean;
@@ -157,11 +157,11 @@ const QuoteModal = ({ isOpen, onClose }: QuoteModalProps) => {
                 <SelectValue placeholder="Select move type" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="local-house">Local House Shifting</SelectItem>
-                <SelectItem value="long-distance">Long Distance Relocation</SelectItem>
-                <SelectItem value="office">Office Moving</SelectItem>
-                <SelectItem value="car">Car Transport</SelectItem>
-                <SelectItem value="bike">Bike Transport</SelectItem>
+                {MOVE_TYPES.map((type) => (
+                  <SelectItem key={type.value} value={type.value}>
+                    {type.label}
+                  </SelectItem>
+                ))}
               </SelectContent>
             </Select>
           </div>

@@ -1,39 +1,11 @@
-import { Award, MapPin, Users, Shield, Clock } from "lucide-react";
+import { TRUST_BADGES } from "@/constants/constants";
 
 const TrustBadges = () => {
-  const badges = [
-    {
-      icon: Award,
-      title: "10+ Years Experience",
-      description: "Serving customers since 2014",
-    },
-    {
-      icon: MapPin,
-      title: "All India Service",
-      description: "Pan-India coverage",
-    },
-    {
-      icon: Users,
-      title: "Professional Staff",
-      description: "Trained & verified team",
-    },
-    {
-      icon: Shield,
-      title: "GST Bill & Insurance",
-      description: "Complete protection",
-    },
-    {
-      icon: Clock,
-      title: "24×7 Support",
-      description: "Always available",
-    },
-  ];
-
   return (
     <section className="py-16 bg-muted">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-          {badges.map((badge, index) => {
+          {TRUST_BADGES.map((badge, index) => {
             const Icon = badge.icon;
             return (
               <div

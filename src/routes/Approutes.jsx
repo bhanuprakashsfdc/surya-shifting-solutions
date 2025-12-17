@@ -1,6 +1,18 @@
-import React from 'react'
+import React from 'react';
 import { Route } from 'react-router-dom';
 import cities from '../data/cities';
+import {
+  CityService,
+  Packersandmovers,
+  Packersandmoversnearme,
+  BestPackersandMovers,
+  BestPackersandMoversin,
+  LocalPackerandMovers,
+  LocalPackerandMoversin,
+  ProfessionalPackerandMovers,
+  ProfessionalPackerandMoversin,
+  Packersandmoversnearmein,
+} from "@/pages/city/CityPages";
 
 const Approutes = () => {
     return (
