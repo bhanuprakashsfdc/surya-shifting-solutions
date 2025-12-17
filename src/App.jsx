@@ -12,6 +12,8 @@ import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import QuoteModal from "@/components/QuoteModal";
+import StickyCTA from "@/components/StickyCTA";
+import CityCoverage from "@/components/CityCoverage";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -33,6 +35,7 @@ function App() {
         <Hero onOpenQuoteModal={() => setIsQuoteModalOpen(true)} />
         <TrustBadges />
         <Services />
+        <CityCoverage />
         <Pricing />
         <HowItWorks />
         <Testimonials />
@@ -43,6 +46,7 @@ function App() {
           isOpen={isQuoteModalOpen} 
           onClose={() => setIsQuoteModalOpen(false)} 
         />
+        <StickyCTA onOpenQuoteModal={() => setIsQuoteModalOpen(true)} />
         </>
       )}
     </div>

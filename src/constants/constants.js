@@ -54,9 +54,9 @@ export const NAV_LINKS = [
 
 export const HERO_CONTENT = {
   title:
-    "Surya All India Packers and Movers – Trusted Packers & Movers for Local & All-India Shifting",
+    "Packers and Movers in Hyderabad – Safe, Insured, GST-Billed Moves Across India",
   subtitle:
-    "Fast, safe and insured house shifting, office relocation & vehicle transport across India.",
+    "Fast local & all-India house shifting, office relocation, and vehicle transport with verified staff and full insurance.",
   primaryCta: "Call Now",
   secondaryCta: "Get Free Quote",
 };
@@ -64,6 +64,90 @@ export const HERO_CONTENT = {
 export const CTA_LABELS = {
   pricingCall: "Call for Exact Estimate",
 };
+
+export const HERO_TRUST_POINTS = [
+  "500+ moves | 4.8/5 rating",
+  "GST billing & full insurance",
+  "24×7 support & live updates",
+];
+
+// Structured data helpers
+const formatPrice = (price) => price.replace(/,/g, "");
+
+export const PRICING_SCHEMA = PRICING_PLANS.map((plan) => ({
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: plan.name,
+  brand: COMPANY.name,
+  offers: {
+    "@type": "Offer",
+    price: formatPrice(plan.price),
+    priceCurrency: "INR",
+    availability: "http://schema.org/InStock",
+  },
+}));
+
+export const REVIEWS_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  itemListElement: TESTIMONIALS.slice(0, 5).map((review, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@type": "Review",
+      author: { "@type": "Person", name: review.name },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: review.rating,
+        bestRating: 5,
+      },
+      reviewBody: review.text,
+    },
+  })),
+};
+
+export const CITY_COVERAGE = [
+  {
+    city: "Hyderabad",
+    headline: "Fast local moves with GST billing & insured transport",
+    lanes: [
+      "Hyderabad → Bangalore (2-3 days)",
+      "Hyderabad → Chennai (2-3 days)",
+      "Hyderabad → Vizag (1-2 days)",
+    ],
+    notes: ["Same-day packing available", "GPS tracking & 24×7 support"],
+  },
+  {
+    city: "Bangalore",
+    headline: "Expert IT/office moves and high-rise access",
+    lanes: [
+      "Bangalore → Hyderabad (2-3 days)",
+      "Bangalore → Chennai (1-2 days)",
+      "Bangalore → Pune/Mumbai (2-4 days)",
+    ],
+    notes: ["Weeknight office moves to reduce downtime", "Lift/hoist support on request"],
+  },
+  {
+    city: "Chennai",
+    headline: "Port-city expertise for vehicle and household moves",
+    lanes: [
+      "Chennai → Hyderabad (2-3 days)",
+      "Chennai → Bangalore (1-2 days)",
+      "Chennai → Coimbatore (1-2 days)",
+    ],
+    notes: ["Full insurance for vehicles", "Door-to-door enclosed carrier options"],
+  },
+  {
+    city: "Vizag",
+    headline: "Coastal lane specialists for household and bike moves",
+    lanes: [
+      "Vizag → Hyderabad (1-2 days)",
+      "Vizag → Chennai (2-3 days)",
+      "Vizag → Bangalore (3-4 days)",
+    ],
+    notes: ["Moisture-safe packing materials", "Bike crating and transit insurance"],
+  },
+];
 
 export const TRUST_BADGES = [
   {

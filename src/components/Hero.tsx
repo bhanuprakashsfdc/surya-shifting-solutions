@@ -5,6 +5,7 @@ import {
   HERO_CONTENT,
   CONTACT_INFO,
   HERO_QUICK_CONTACT,
+  HERO_TRUST_POINTS,
 } from "@/constants/constants";
 
 const Hero = ({ onOpenQuoteModal }: { onOpenQuoteModal: () => void }) => {
@@ -17,6 +18,8 @@ const Hero = ({ onOpenQuoteModal }: { onOpenQuoteModal: () => void }) => {
           alt="Professional packers and movers team with happy family"
           className="w-full h-full object-cover"
           loading="eager"
+          fetchPriority="high"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-background/40"></div>
       </div>
@@ -58,6 +61,21 @@ const Hero = ({ onOpenQuoteModal }: { onOpenQuoteModal: () => void }) => {
               <MessageCircle className="w-5 h-5 mr-2" />
               {HERO_CONTENT.secondaryCta}
             </Button>
+          </div>
+
+          {/* Trust proof chips */}
+          <div
+            className="mt-6 flex flex-wrap gap-3 animate-fade-in-up"
+            style={{ animationDelay: "0.5s", opacity: 0, animationFillMode: "forwards" }}
+          >
+            {HERO_TRUST_POINTS.map((point) => (
+              <span
+                key={point}
+                className="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-sm font-semibold text-primary"
+              >
+                {point}
+              </span>
+            ))}
           </div>
 
           {/* Quick Contact */}
