@@ -89,6 +89,48 @@ const CityLanding = ({ city, title, subtitle }: CityPageProps) => {
               </div>
             </div>
           </div>
+
+          {/* SEO-friendly content sections that naturally reinforce the topic */}
+          <div className="space-y-8">
+            <section>
+              <h2 className="text-2xl font-semibold text-foreground">Trusted Packers and Movers in {city}</h2>
+              <p className="mt-2 text-muted-foreground">
+                As experienced packers and movers in {city}, we handle local house shifting, office relocation, and vehicle transport with insured service and GST billing. Our movers and packers team plans your move, packs with premium materials, and delivers safely across {city} and pan‑India.
+              </p>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-foreground">Neighborhood Coverage in {city}</h2>
+              <p className="mt-2 text-muted-foreground">
+                We regularly serve popular neighborhoods in {city} with door‑to‑door packers and movers support:
+              </p>
+              <ul className="mt-3 grid grid-cols-2 md:grid-cols-3 gap-2 text-sm text-muted-foreground">
+                <li>Downtown {city}</li>
+                <li>Old Town {city}</li>
+                <li>Industrial Area</li>
+                <li>University Quarter</li>
+                <li>Transport Nagar</li>
+                <li>Residential Enclaves</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-foreground">Relocation Services in {city}</h2>
+              <ul className="mt-2 list-disc list-inside text-sm text-muted-foreground space-y-1">
+                <li>Home shifting by professional packers and movers in {city}</li>
+                <li>Office relocation with labeling and insured transport</li>
+                <li>Car and bike transport with GPS tracking</li>
+                <li>Premium packing, careful loading, and safe delivery</li>
+              </ul>
+            </section>
+
+            <section>
+              <h2 className="text-2xl font-semibold text-foreground">Moving Tips for {city}</h2>
+              <p className="mt-2 text-muted-foreground">
+                For a smooth experience with packers and movers in {city}, book 3–5 days in advance, share an item list, and keep fragile items clearly marked. Our team provides real‑time updates and 24×7 assistance.
+              </p>
+            </section>
+          </div>
         </div>
       </section>
 
@@ -168,6 +210,8 @@ export const Packersandmoversnearmein = makePage(
 // Dynamic route wrapper: supports /packers-and-movers-in-:slug.html
 // Derives city name from URL for dynamic routing use cases.
 import { useParams, useLocation } from "react-router-dom";
+import { Helmet } from "react-helmet";
+import { COMPANY } from "@/constants/constants";
 
 export const CityServiceParam = () => {
   const { slug } = useParams();
@@ -184,12 +228,46 @@ export const CityServiceParam = () => {
   const city = decodeURIComponent((derived || "").replace(/-/g, " "));
   const titlePrefix = "Packers and Movers in";
   const subtitle = "Trusted city-to-city and local relocations with insured transport.";
+  const hyphenSlug = (derived || "").toLowerCase();
+  const canonical = `${COMPANY.url}/packers-and-movers-in/${hyphenSlug}`;
+  const pageTitle = `${titlePrefix} ${city} | ${COMPANY.name}`;
+  const pageDescription = `Safe, insured house shifting, office relocation and vehicle transport in ${city}. Free 5‑minute quote. GST bill. Pan‑India network.`;
+  const breadcrumbList = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": COMPANY.url,
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": `Packers and Movers in ${city}`,
+        "item": canonical,
+      },
+    ],
+  };
   return (
-    <CityLanding
-      city={city}
-      title={`${titlePrefix} ${city}`}
-      subtitle={subtitle}
-    />
+    <>
+      <Helmet>
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <link rel="canonical" href={canonical} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonical} />
+        <script type="application/ld+json">{JSON.stringify(breadcrumbList)}</script>
+      </Helmet>
+      <CityLanding
+        city={city}
+        title={`${titlePrefix} ${city}`}
+        subtitle={subtitle}
+      />
+    </>
   );
 };
 

@@ -24,4 +24,35 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <!-- City landing pages -->
+  <url>
+    <loc>https://suryaallindiapackers.com/packers-and-movers-in/hyderabad</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://suryaallindiapackers.com/packers-and-movers-in/bangalore</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://suryaallindiapackers.com/packers-and-movers-in/chennai</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://suryaallindiapackers.com/packers-and-movers-in/vijayawada</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://suryaallindiapackers.com/packers-and-movers-in/guntur</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://suryaallindiapackers.com/packers-and-movers-in/vizag</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>

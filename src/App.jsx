@@ -1,4 +1,5 @@
 import React,{ useState, useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import Preloader from './components/Preloader';
 
 import Header from "@/components/Header";
@@ -15,6 +16,7 @@ import QuoteModal from "@/components/QuoteModal";
 import StickyCTA from "@/components/StickyCTA";
 import CityCoverage from "@/components/CityCoverage";
 import TopCities from "@/components/TopCities.jsx";
+import { FAQ_SCHEMA, LOCAL_BUSINESS_SCHEMA, PRICING_SCHEMA, REVIEWS_SCHEMA } from "@/constants/constants";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -32,6 +34,12 @@ function App() {
     <div className="App">
       {loading ? <Preloader /> : (
         <>
+        <Helmet>
+          <script type="application/ld+json">{JSON.stringify(LOCAL_BUSINESS_SCHEMA)}</script>
+          <script type="application/ld+json">{JSON.stringify(FAQ_SCHEMA)}</script>
+          <script type="application/ld+json">{JSON.stringify(PRICING_SCHEMA)}</script>
+          <script type="application/ld+json">{JSON.stringify(REVIEWS_SCHEMA)}</script>
+        </Helmet>
         <Header onOpenQuoteModal={() => setIsQuoteModalOpen(true)} />
         <Hero onOpenQuoteModal={() => setIsQuoteModalOpen(true)} />
         <TrustBadges />
