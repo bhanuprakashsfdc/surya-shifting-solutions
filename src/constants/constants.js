@@ -71,41 +71,6 @@ export const HERO_TRUST_POINTS = [
   "24×7 support & live updates",
 ];
 
-// Structured data helpers
-const formatPrice = (price) => price.replace(/,/g, "");
-
-export const PRICING_SCHEMA = PRICING_PLANS.map((plan) => ({
-  "@context": "https://schema.org",
-  "@type": "Product",
-  name: plan.name,
-  brand: COMPANY.name,
-  offers: {
-    "@type": "Offer",
-    price: formatPrice(plan.price),
-    priceCurrency: "INR",
-    availability: "http://schema.org/InStock",
-  },
-}));
-
-export const REVIEWS_SCHEMA = {
-  "@context": "https://schema.org",
-  "@type": "ItemList",
-  itemListElement: TESTIMONIALS.slice(0, 5).map((review, index) => ({
-    "@type": "ListItem",
-    position: index + 1,
-    item: {
-      "@type": "Review",
-      author: { "@type": "Person", name: review.name },
-      reviewRating: {
-        "@type": "Rating",
-        ratingValue: review.rating,
-        bestRating: 5,
-      },
-      reviewBody: review.text,
-    },
-  })),
-};
-
 export const CITY_COVERAGE = [
   {
     city: "Hyderabad",
@@ -321,6 +286,41 @@ export const TESTIMONIAL_META = {
   averageRating: "4.8/5",
   ratingValue: 4.8,
   reviewCount: 500,
+};
+
+// Structured data helpers and schema
+const formatPrice = (price) => price.replace(/,/g, "");
+
+export const PRICING_SCHEMA = PRICING_PLANS.map((plan) => ({
+  "@context": "https://schema.org",
+  "@type": "Product",
+  name: plan.name,
+  brand: COMPANY.name,
+  offers: {
+    "@type": "Offer",
+    price: formatPrice(plan.price),
+    priceCurrency: "INR",
+    availability: "http://schema.org/InStock",
+  },
+}));
+
+export const REVIEWS_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  itemListElement: TESTIMONIALS.slice(0, 5).map((review, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@type": "Review",
+      author: { "@type": "Person", name: review.name },
+      reviewRating: {
+        "@type": "Rating",
+        ratingValue: review.rating,
+        bestRating: 5,
+      },
+      reviewBody: review.text,
+    },
+  })),
 };
 
 export const FAQ_ITEMS = [
