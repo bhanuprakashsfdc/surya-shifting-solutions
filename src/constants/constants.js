@@ -21,7 +21,7 @@ export const COMPANY = {
   shortName: "Surya Packers",
   tagline: "All India Movers",
   logoInitial: "S",
-  url: "https://suryaallindiapackers.com",
+  url: "https://www.suryaallindiapackersandmovers.com",
 };
 
 export const CONTACT_INFO = {
