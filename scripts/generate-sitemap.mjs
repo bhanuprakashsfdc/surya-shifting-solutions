@@ -16,6 +16,11 @@ const lastmod = today.toISOString().slice(0, 10);
 const staticPaths = [
   '/',
   '/index.html',
+  '/privacy-policy.html',
+  '/terms.html',
+  '/disclaimer.html',
+  '/about.html',
+  '/contact.html',
 ];
 
 // Build city paths mirroring router configuration (.html variants)

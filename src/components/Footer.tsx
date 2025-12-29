@@ -99,14 +99,23 @@ const Footer = () => {
         <div className="border-t border-background/20 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-background/80 text-sm text-center md:text-left">
-              © {currentYear} Surya All India Packers and Movers. & Created and maintained by <a href="https://anuhyadigital.com/" >Anuhya Digital </a> All rights reserved. All rights reserved.
+              © {currentYear} Surya All India Packers and Movers. & Created and maintained by <a href="https://anuhyadigital.com/" >Anuhya Digital </a> All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
-              <a href="#" className="text-background/80 hover:text-primary transition-colors">
+              <a href="/privacy-policy.html" className="text-background/80 hover:text-primary transition-colors">
                 Privacy Policy
               </a>
-              <a href="#" className="text-background/80 hover:text-primary transition-colors">
+              <a href="/terms.html" className="text-background/80 hover:text-primary transition-colors">
                 Terms & Conditions
+              </a>
+              <a href="/disclaimer.html" className="text-background/80 hover:text-primary transition-colors">
+                Disclaimer
+              </a>
+              <a href="/about.html" className="text-background/80 hover:text-primary transition-colors">
+                About
+              </a>
+              <a href="/contact.html" className="text-background/80 hover:text-primary transition-colors">
+                Contact
               </a>
             </div>
           </div>
