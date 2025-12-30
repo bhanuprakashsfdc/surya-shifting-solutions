@@ -140,7 +140,6 @@ const CityLanding = ({ city, title, subtitle }: CityPageProps) => {
       {/* FAQ, Contact, Footer and sticky CTA like homepage */}
       <FAQ />
       <Contact />
-      <Footer />
       <QuoteModal isOpen={isQuoteModalOpen} onClose={() => setIsQuoteModalOpen(false)} />
       <StickyCTA onOpenQuoteModal={() => setIsQuoteModalOpen(true)} />
     </div>
