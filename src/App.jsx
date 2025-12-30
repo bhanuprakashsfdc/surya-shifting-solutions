@@ -52,7 +52,6 @@ function App() {
         <Testimonials />
         <FAQ />
         <Contact />
-        <Footer />
         <QuoteModal 
           isOpen={isQuoteModalOpen} 
           onClose={() => setIsQuoteModalOpen(false)} 
