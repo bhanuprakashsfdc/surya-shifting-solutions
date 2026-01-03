@@ -30,8 +30,8 @@ export const CONTACT_INFO = {
   whatsappDisplay: "+91-9492404119",
   whatsappHref: "https://wa.me/919492404119",
   email: "contact@suryaallindiapackers.com",
-  address: "Hyderabad, Telangana, India",
-  mainOffice: "Main Office: Hyderabad, Telangana",
+  address: "Tirupati, Andhra Pradesh, India",
+  mainOffice: "Main Office: Tirupati, Andhra Pradesh",
   serviceAreas: [
     "Hyderabad",
     "Bangalore",
