@@ -25,10 +25,10 @@ export const COMPANY = {
 };
 
 export const CONTACT_INFO = {
-  phoneDisplay: "+91-9492404119",
-  phoneHref: "tel:+919492404119",
-  whatsappDisplay: "+91-9492404119",
-  whatsappHref: "https://wa.me/919492404119",
+  phoneDisplay: "+91-9492402614",
+  phoneHref: "tel:+919492402614",
+  whatsappDisplay: "+91-9492402614",
+  whatsappHref: "https://wa.me/919492402614",
   email: "contact@suryaallindiapackers.com",
   address: "Tirupati, Andhra Pradesh, India",
   mainOffice: "Main Office: Tirupati, Andhra Pradesh",
