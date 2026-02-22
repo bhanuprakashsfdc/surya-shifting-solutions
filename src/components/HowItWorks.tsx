@@ -1,27 +1,6 @@
-import { MessageSquare, Calculator, Truck } from "lucide-react";
+import { HOW_IT_WORKS_STEPS } from "@/constants/constants";
 
 const HowItWorks = () => {
-  const steps = [
-    {
-      icon: MessageSquare,
-      title: "Share Your Moving Details",
-      description:
-        "Contact us via call, WhatsApp, or our quote form. Provide your moving requirements and preferred dates.",
-    },
-    {
-      icon: Calculator,
-      title: "Get Instant Estimate",
-      description:
-        "Receive a transparent cost estimate within minutes. We confirm the schedule and send our team details.",
-    },
-    {
-      icon: Truck,
-      title: "Relax & We Deliver",
-      description:
-        "Our professional team handles packing, loading, transport, and delivery. Track your shipment in real-time.",
-    },
-  ];
-
   return (
     <section id="about" className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -38,7 +17,7 @@ const HowItWorks = () => {
           {/* Connection Lines (Hidden on mobile) */}
           <div className="hidden md:block absolute top-1/4 left-0 right-0 h-0.5 bg-border -z-10"></div>
 
-          {steps.map((step, index) => {
+          {HOW_IT_WORKS_STEPS.map((step, index) => {
             const Icon = step.icon;
             return (
               <div

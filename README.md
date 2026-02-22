@@ -1,73 +1,105 @@
-# Welcome to your Lovable project
+📦 Surya All India Packers and Movers
 
-## Project info
+Reliable Relocation & Moving Service Across India 🇮🇳
 
-**URL**: https://lovable.dev/projects/af25f1aa-6e3e-4aff-bc3b-fcf7d17f6cdb
+A professional relocation service website providing end-to-end packing, moving, and transportation solutions — helping households, offices, vehicles, and goods move safely and efficiently across local and long-distance routes throughout India.
 
-## How can I edit this code?
+🚀 Overview
 
-There are several ways of editing your application.
+Surya All India Packers and Movers is focused on delivering a stress-free moving experience through reliable logistics support, expert packing, safe transportation, and personalized relocation services. The web platform outlines key services, company values, and contact options to help customers plan their move with ease.
 
-**Use Lovable**
+📌 Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/af25f1aa-6e3e-4aff-bc3b-fcf7d17f6cdb) and start prompting.
+✅ Household Shifting Services – Safe and secure home relocation.
 
-Changes made via Lovable will be committed automatically to this repo.
+✅ Office Relocation – Efficient corporate or business moves.
 
-**Use your preferred IDE**
+✅ Vehicle Transportation – Car and bike door-to-door transport.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+✅ Packing & Unpacking – High-quality packing materials and technique.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+✅ Loading & Unloading – Skilled professionals handle all physical work.
 
-Follow these steps:
+✅ Local & Long-Distance Moving – Coverage across cities and states.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+✅ Free Quotes – Contact forms or calls for instant estimates.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+🧑‍💻 Developed By
 
-# Step 3: Install the necessary dependencies.
-npm i
+Anuhya Digital
+ 🚀 — Expert web development, Salesforce implementation, SEO, and digital solutions provider based in Tirupati, India.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+📇 Contact Information
 
-**Edit a file directly in GitHub**
+Anuhya Digital
+📍 Flat No 401, Sri Pradha Hills, Mangalam, Tirupati, Andhra Pradesh 517501, India
+📞 +91-8861789164
+✉️ hello@anuhyadigital.com
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+🌐 https://anuhyadigital.com/
 
-**Use GitHub Codespaces**
+🛠 Tech Stack (Assumed)
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Edit this section when exact stack details are known.
 
-## What technologies are used for this project?
+Layer	Technology
+Frontend	HTML, CSS, JavaScript
+Backend	PHP / CMS (e.g., WordPress)
+Hosting	Shared / Cloud hosting
+Forms	Email / CRM integration
+SEO	Meta tags, structured content
+📁 Suggested Repository Structure
+📦 SuryaAllIndiaPackersAndMovers
+├── 📂 assets
+│   ├── css/
+│   ├── js/
+│   └── images/
+├── 📄 index.html
+├── 📄 about.html
+├── 📄 services.html
+├── 📄 contact.html
+├── 📄 README.md
+└── 📄 LICENSE
 
-This project is built with:
+🛠 Setup Instructions
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Clone the repository
 
-## How can I deploy this project?
+git clone https://github.com/<username>/SuryaAllIndiaPackersAndMovers.git
 
-Simply open [Lovable](https://lovable.dev/projects/af25f1aa-6e3e-4aff-bc3b-fcf7d17f6cdb) and click on Share -> Publish.
 
-## Can I connect a custom domain to my Lovable project?
+Navigate to the project
 
-Yes, you can!
+cd SuryaAllIndiaPackersAndMovers
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Open in browser
+
+Double-click index.html
+
+OR with live server:
+
+npx live-server
+
+📖 Usage
+
+This site is an informational and contact platform for customers seeking relocation services — from home shifting to vehicle transport — with details on how to get quotes and support.
+
+📋 License
+
+This project is licensed under the MIT License — see the LICENSE
+ file for details.
+
+🤝 Contribution
+
+Want to help improve this project?
+
+Fork the repo
+
+Create a feature branch
+
+Send a pull request
+
+⭐ Acknowledgements
+
+Thanks to the Surya All India Packers and Movers website content for service details and structure.

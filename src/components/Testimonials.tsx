@@ -2,49 +2,17 @@ import { useState } from "react";
 import { Star, ChevronLeft, ChevronRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { TESTIMONIALS, TESTIMONIAL_META } from "@/constants/constants";
 
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const testimonials = [
-    {
-      name: "Rajesh Kumar",
-      location: "Hyderabad to Bangalore",
-      rating: 5,
-      text: "Excellent service! The team was professional and handled all my belongings with care. The entire process was smooth and stress-free. Highly recommended!",
-    },
-    {
-      name: "Priya Sharma",
-      location: "Chennai to Vijayawada",
-      rating: 5,
-      text: "Very satisfied with their service. They arrived on time, packed everything carefully, and delivered within the promised time. Great experience overall!",
-    },
-    {
-      name: "Anil Reddy",
-      location: "Guntur to Vizag",
-      rating: 5,
-      text: "Best packers and movers I've used. Professional team, affordable pricing, and excellent customer service. My car was delivered safely without any scratches.",
-    },
-    {
-      name: "Sneha Patel",
-      location: "Bangalore to Hyderabad",
-      rating: 4,
-      text: "Good service at reasonable prices. The packing was done professionally and nothing was damaged. Would definitely use their services again.",
-    },
-    {
-      name: "Vikram Singh",
-      location: "Hyderabad to Chennai",
-      rating: 5,
-      text: "Impressed with their professionalism. They provided insurance, proper GST bill, and timely updates throughout the move. Trustworthy company!",
-    },
-  ];
-
   const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    setCurrentIndex((prev) => (prev + 1) % TESTIMONIALS.length);
   };
 
   const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentIndex((prev) => (prev - 1 + TESTIMONIALS.length) % TESTIMONIALS.length);
   };
 
   return (
@@ -60,10 +28,12 @@ const Testimonials = () => {
                 <Star key={i} className="w-6 h-6 fill-secondary text-secondary" />
               ))}
             </div>
-            <span className="text-xl font-semibold text-foreground">4.8/5</span>
+            <span className="text-xl font-semibold text-foreground">
+              {TESTIMONIAL_META.averageRating}
+            </span>
           </div>
           <p className="text-lg text-muted-foreground">
-            Rated by 500+ happy customers
+            Rated by {TESTIMONIAL_META.reviewCount}+ happy customers
           </p>
         </div>
 
@@ -71,19 +41,19 @@ const Testimonials = () => {
           <Card className="border-border shadow-xl">
             <CardContent className="p-8 md:p-12">
               <div className="flex mb-4">
-                {[...Array(testimonials[currentIndex].rating)].map((_, i) => (
+                {[...Array(TESTIMONIALS[currentIndex].rating)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 fill-secondary text-secondary" />
                 ))}
               </div>
               <p className="text-lg md:text-xl text-foreground mb-6 leading-relaxed">
-                "{testimonials[currentIndex].text}"
+                "{TESTIMONIALS[currentIndex].text}"
               </p>
               <div>
                 <p className="font-semibold text-foreground">
-                  {testimonials[currentIndex].name}
+                  {TESTIMONIALS[currentIndex].name}
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  {testimonials[currentIndex].location}
+                  {TESTIMONIALS[currentIndex].location}
                 </p>
               </div>
             </CardContent>
@@ -113,7 +83,7 @@ const Testimonials = () => {
 
           {/* Dots Indicator */}
           <div className="flex justify-center gap-2 mt-6">
-            {testimonials.map((_, index) => (
+            {TESTIMONIALS.map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}

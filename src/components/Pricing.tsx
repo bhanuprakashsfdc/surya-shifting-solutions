@@ -2,55 +2,9 @@ import { Phone } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import { CONTACT_INFO, PRICING_PLANS, CTA_LABELS } from "@/constants/constants";
 
 const Pricing = () => {
-  const pricingPlans = [
-    {
-      name: "1BHK Local Shifting",
-      price: "3,499",
-      features: [
-        "Complete packing materials",
-        "Loading & unloading",
-        "Local transportation",
-        "Basic insurance",
-      ],
-      popular: false,
-    },
-    {
-      name: "2BHK Local Shifting",
-      price: "5,499",
-      features: [
-        "Premium packing materials",
-        "Professional team",
-        "Loading & unloading",
-        "Comprehensive insurance",
-      ],
-      popular: true,
-    },
-    {
-      name: "Car Transport India",
-      price: "7,999",
-      features: [
-        "Door-to-door service",
-        "GPS tracking",
-        "Enclosed carrier",
-        "Full vehicle insurance",
-      ],
-      popular: false,
-    },
-    {
-      name: "Bike Transport India",
-      price: "1,499",
-      features: [
-        "Safe packaging",
-        "All India coverage",
-        "Transit insurance",
-        "Timely delivery",
-      ],
-      popular: false,
-    },
-  ];
-
   return (
     <section id="pricing" className="py-20 bg-muted">
       <div className="container mx-auto px-4">
@@ -64,7 +18,7 @@ const Pricing = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-          {pricingPlans.map((plan, index) => (
+          {PRICING_PLANS.map((plan, index) => (
             <Card
               key={index}
               className={`relative border-border hover:shadow-xl transition-all duration-300 animate-scale-in ${
@@ -111,13 +65,13 @@ const Pricing = () => {
         </div>
 
         <div className="text-center">
-          <a href="tel:+919876543210">
+          <a href={CONTACT_INFO.phoneHref}>
             <Button 
               size="lg" 
               className="bg-secondary hover:bg-secondary-hover text-secondary-foreground"
             >
               <Phone className="w-5 h-5 mr-2" />
-              Call for Exact Estimate
+              {CTA_LABELS.pricingCall}
             </Button>
           </a>
           <p className="text-sm text-muted-foreground mt-4">
