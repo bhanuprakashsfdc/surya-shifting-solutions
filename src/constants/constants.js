@@ -410,6 +410,11 @@ export const PRELOADER_TEXT = {
   sublineBottom: "Packers and Movers",
 };
 
+export const WEBSITE_CREDIT = {
+  designer: "Anuhya Digital",
+  phone: "+91-9666844498",
+};
+
 export const LOCAL_BUSINESS_SCHEMA = {
   "@context": "https://schema.org",
   "@type": "MovingCompany",
