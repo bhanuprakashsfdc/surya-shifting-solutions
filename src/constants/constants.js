@@ -25,10 +25,10 @@ export const COMPANY = {
 };
 
 export const CONTACT_INFO = {
-  phoneDisplay: "+91-9492404119",
-  phoneHref: "tel:+919492404119",
-  whatsappDisplay: "+91-9492404119",
-  whatsappHref: "https://wa.me/919492404119",
+  phoneDisplay: "+91-9492402614",
+  phoneHref: "tel:+919492402614",
+  whatsappDisplay: "+91-9492402614",
+  whatsappHref: "https://wa.me/919492402614",
   email: "contact@suryaallindiapackers.com",
   address: "Tirupati, Andhra Pradesh, India",
   mainOffice: "Main Office: Tirupati, Andhra Pradesh",
@@ -408,6 +408,11 @@ export const PRELOADER_TEXT = {
   brand: "SURYA",
   sublineTop: "All India",
   sublineBottom: "Packers and Movers",
+};
+
+export const WEBSITE_CREDIT = {
+  designer: "Anuhya Digital",
+  phone: "+91-9666844498",
 };
 
 export const LOCAL_BUSINESS_SCHEMA = {
