@@ -32,13 +32,10 @@ const Header = ({ onOpenQuoteModal }: { onOpenQuoteModal: () => void }) => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="/" className="flex items-center space-x-3">
-            <div className="w-12 h-12 rounded-lg flex items-center justify-center">
-              <img src="/logo.png" alt={COMPANY.name} className="w-12 h-12" />
-              {/* 
+            <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center">
               <span className="text-2xl font-bold text-primary-foreground">
                 {COMPANY.logoInitial}
               </span>
-              */}
             </div>
             <div className="flex flex-col">
               <span className="text-xl font-bold text-foreground leading-none">

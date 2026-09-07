@@ -10,8 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div>
-            
-            <h3 className="text-xl font-bold mb-4"> <img src="/logo.png" alt={COMPANY.name} className="w-12 h-12" /> {COMPANY.shortName} & Movers</h3>
+            <h3 className="text-xl font-bold mb-4">{COMPANY.shortName} & Movers</h3>
             <p className="text-background/80 mb-4">
               India's trusted packers and movers for safe, fast, and affordable relocation services.
             </p>
